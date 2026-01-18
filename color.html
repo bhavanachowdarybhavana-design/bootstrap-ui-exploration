@@ -1,0 +1,92 @@
+/* ---------- BASE ---------- */
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.4s, color 0.4s;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- THEMES ---------- */
+.home-theme {
+    background-color: #f4f8ff;
+}
+
+.about-theme {
+    background-color: #e8f5e9;
+}
+
+.contact-theme {
+    background-color: #f3e5f5;
+}
+
+/* ---------- MAIN CONTENT ---------- */
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+/* ---------- CARDS ---------- */
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* ---------- BUTTON ---------- */
+.btn-theme {
+    background-color: #198754;
+    color: white;
+    border: none;
+}
+
+.about-theme .btn-theme {
+    background-color: #2e7d32;
+}
+
+.contact-theme .btn-theme {
+    background-color: #6a1b9a;
+}
+
+.btn-theme:hover {
+    opacity: 0.9;
+    color: white;
+}
+
+/* ---------- ANIMATION ---------- */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- DARK MODE ---------- */
+.dark-mode {
+    background-color: #121212 !important;
+    color: #f1f1f1;
+}
+
+.dark-mode .card {
+    background-color: #1f1f1f;
+}
+
+.dark-mode nav,
+.dark-mode footer {
+    background-color: #000 !important;
+}
